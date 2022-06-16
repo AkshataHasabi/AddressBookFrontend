@@ -1,0 +1,119 @@
+<div class="form-content">
+    <form class ="form">
+        <h2> Add Details</h2>
+        <div class="row-content">
+            <label for="firstName" class="label text">First Name</label>
+            <input type="text" class="input" pattern="^[A-Z]{1}[a-zA-Z\\s]{2,}$" id="firstName" name="firstName" placeholder="Enter ur first name.."  required [(ngModel)]="addressbookdata.fName">
+        </div>
+
+        <div class="row-content">
+            <label for="lastName" class="label text">Last Name</label>
+            <input type="text" class="input" pattern="^[A-Z]{1}[a-zA-Z\\s]{2,}$" id="lastName" name="lastName" placeholder="Enter ur last name.."  required [(ngModel)]="addressbookdata.lName">
+        </div>
+
+        <div class="row-content">
+            <label for="email" class="label text">Email</label>
+            <input type="text" class="input" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" id="email" name="email" placeholder="Enter ur Email Id..." required [(ngModel)]="addressbookdata.email"> 
+        </div>
+
+        <div class="row-content">
+            <label for="phoneNumber" class="label text">Phone Number</label>
+            <input type="tel" class="input" id="phoneNumber" name="phoneNumber" placeholder="Enter ur phone number.." required [(ngModel)]="addressbookdata.phoneNumber">
+        </div>
+
+        <div class="row-content">
+            <label for="address" class="label text">Address</label>
+            <textarea name="address" id="address" placeholder="Enter ur address.."  required [(ngModel)]="addressbookdata.address"></textarea>
+        </div>
+
+        <div class="row-content">
+            <div class="column-constrains">
+              <div class="column-content">
+                <label for="city" class="label text">City</label>
+                <select name="city" id="city" required [(ngModel)]="addressbookdata.city">
+                  <option selected value="default">Select City name</option>
+                  <option value="Bijapur">Bijapur</option>
+                  <option value="Bidar">Bidar</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Bellary">Bellary</option>
+                  <option value="Bagalkot">Bagalkot</option>
+                  <option value="Dharwad">Dharwad</option>
+                  <option value="Gadag">Gadag</option>
+                  <option value="Tumkur">Tumkur</option>
+                  <option value="Hospet">Hospet</option>
+                  <option value="Badami">Badami</option>
+                  <option value="Davanagere">Davanagere</option>
+                  <option value="Belgaum">Belgaum</option>
+                </select>
+              </div>
+
+              <div class="column-content">
+                <label for="state" class="label text">State</label>
+                <select name="state" id="state" required [(ngModel)]="addressbookdata.state">
+                  <option selected  value="default">Select ur State</option>
+                  <option value="MadhyaPradesh">Madhya Pradesh</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Daman and Diu">Daman and Diu</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Lakshadweep">Lakshadweep</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Puducherry">Puducherry</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+                </select>
+              </div>
+
+              <div class="column-content">
+                <label for="country" class="label text">Country</label>
+                <select name="country" id="country" required [(ngModel)]="addressbookdata.country">
+                  <option selected  value="default">Select ur Country</option>
+                  <option value="Germany">Germany</option>
+                  <option value="China">China</option>
+                  <option value="Belgium">Belgium</option>
+                  <option value="Australia">Australia</option>
+                  <option value="France">France</option>
+                  <option value="Canada">Canada</option>
+                  <option value="India">India</option>
+                </select>
+              </div>
+
+              <div class="column-content">
+                <label for="zipCode" class="label text">Zip code</label>
+                <input type="text" class="input zipcode" id="zipCode" pattern="^[1-9]{1}[0-9]{2}\\-{0,1}\\s{0,1}[0-9]{3}$" name="zipCode"  placeholder="Enter zipcode.." required [(ngModel)]="addressbookdata.zipCode">
+              </div>
+
+            </div>
+        </div>
+        
+        <div class="buttons-contact">
+            <button type="button" class="button button-cancel" id="cancelButton" (click)="onCancle()">Cancel</button>
+            <button type="button" class="button button-submit" id="submitButton" (click)="onSubmit()">Submit</button>
+            <button type="reset" class="button button-reset" id="resetButton" >Reset</button>
+        </div>
+    </form>
