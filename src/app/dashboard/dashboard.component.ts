@@ -25,4 +25,11 @@ export class DashboardComponent implements OnInit {
       this.addressbookdata = data.data;
     });
   }
+
+  deleteAddresssBookById(id:number){
+    this.service.deleteAddressBookById(id).subscribe((data)=>{
+      this.ngOnInit();
+      this.router.navigate(["dashboard"]);
+    })
+  }
 }

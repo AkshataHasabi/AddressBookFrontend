@@ -37,6 +37,9 @@
                 <td>{{addAddressBook.state}}</td>
                 <td>{{addAddressBook.zipCode}}</td>
                 <td>{{addAddressBook.country}}</td>
+                <td>
+                    <img src="../assets/delete.svg" (click)="deleteAddresssBookById(addAddressBook.id)" />
+                </td>
             </tr>
         </table>
     </div>

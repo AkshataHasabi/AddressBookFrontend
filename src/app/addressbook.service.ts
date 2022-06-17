@@ -19,4 +19,8 @@ export class AddressbookService {
     return this.http.get("http://localhost:8080/addressbook/get");
   }
 
+  deleteAddressBookById(id:number){
+    return this.http.delete("http://localhost:8080/addressbook/"+id);
+  }
+
 }
