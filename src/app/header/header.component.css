@@ -15,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     border: 0px solid green;
+    height: 70px;
 }
 
 .logo-content{

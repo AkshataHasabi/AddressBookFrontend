@@ -30,6 +30,10 @@ export class DashboardComponent implements OnInit {
     this.service.deleteAddressBookById(id).subscribe((data)=>{
       this.ngOnInit();
       this.router.navigate(["dashboard"]);
-    })
+    });
+  }
+
+  updateById(id:number){
+    this.router.navigate(['update',id])
   }
 }

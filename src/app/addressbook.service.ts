@@ -23,4 +23,8 @@ export class AddressbookService {
     return this.http.delete("http://localhost:8080/addressbook/"+id);
   }
 
+  updateAddressBookById(addressbookdata:any,id:number){
+    return this.http.put("http://localhost:8080/addressbook/update/"+id,addressbookdata)
+  }
+
 }

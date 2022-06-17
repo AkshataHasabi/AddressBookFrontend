@@ -12,6 +12,8 @@ export class FormComponent implements OnInit {
   
   constructor(private router:Router, private service:AddressbookService, private route:ActivatedRoute) { }
 
+  id: any = this.route.snapshot.paramMap.get("id");
+
   addressbookdata: Addressbookdata=new Addressbookdata("","","","","","","","","")
 
   ngOnInit(): void {
@@ -28,5 +30,9 @@ export class FormComponent implements OnInit {
     this.router.navigate(["dashboard"]);
   }
 
-
+  updateAddressBookData() {
+    this.service.updateAddressBookById(this.addressbookdata, this.id).subscribe ((data:any) => {
+      this.router.navigate(["dashboard"])
+    });  
+  }
 }

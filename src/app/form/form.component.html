@@ -114,7 +114,8 @@
         
         <div class="buttons-contact">
             <button type="button" class="button button-cancel" id="cancelButton" (click)="onCancle()">Cancel</button>
-            <button type="button" class="button button-submit" id="submitButton"  (click)="onSubmit()">Submit</button>
+            <button type="button" class="button button-submit" id="submitButton" *ngIf="id==null" (click)="onSubmit()">Submit</button>
+            <button type="button" class="button button-submit" id="submitButton"  *ngIf="id!=null" (click)="updateAddressBookData()">Update</button>
             <button type="reset" class="button button-reset" id="resetButton" >Reset</button>
         </div>
     </form>
