@@ -1,6 +1,6 @@
 export class Addressbookdata {
-    fName:String;
-    lName:String;
+    firstName:String;
+    lastName:String;
     phoneNumber:String;
     email:String;
     address:String;
@@ -8,9 +8,9 @@ export class Addressbookdata {
     state:String;
     zipCode:String;
     country:String;
-    constructor( fName:String,lName:String,phoneNumber:String, email:String, address:String,city:String, state:String,zipCode:String,country:String){
-        this.fName = fName;
-        this.lName = lName;
+    constructor( firstName:String,lastName:String,phoneNumber:String, email:String, address:String,city:String, state:String,zipCode:String,country:String){
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.address = address;

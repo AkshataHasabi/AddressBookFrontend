@@ -26,6 +26,18 @@
                 <th>country</th>
                 <th>Actions</th>
             </tr>
+            <tr *ngFor="let addAddressBook of addressbookdata">
+                 <td>{{addAddressBook.id}}</td>
+                <td>{{addAddressBook.firstName}}</td>
+                <td>{{addAddressBook.lastName}}</td>
+                <td>{{addAddressBook.phoneNumber}}</td>
+                <td>{{addAddressBook.email}}</td>
+                <td>{{addAddressBook.address}}</td>
+                <td>{{addAddressBook.city}}</td>
+                <td>{{addAddressBook.state}}</td>
+                <td>{{addAddressBook.zipCode}}</td>
+                <td>{{addAddressBook.country}}</td>
+            </tr>
         </table>
     </div>
 </div>

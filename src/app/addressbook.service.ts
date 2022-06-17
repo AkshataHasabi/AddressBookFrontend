@@ -14,4 +14,9 @@ export class AddressbookService {
   addAddressbookdata(addressbookdata: any){
     return this.http.post("http://localhost:8080/addressbook/create", addressbookdata);
   }
+
+  getAllAddressBookData(){
+    return this.http.get("http://localhost:8080/addressbook/get");
+  }
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AddressbookService } from '../addressbook.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,13 +8,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  addressbookdata: any;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private service:AddressbookService) { }
 
   ngOnInit(): void {
+    this.getAllAddressBookData();
   }
 
   onAddUser(){
     this.router.navigate(["form"]);
+  }
+
+  getAllAddressBookData(){
+    this.service.getAllAddressBookData().subscribe((data:any) => {
+      this.addressbookdata = data.data;
+    });
   }
 }
