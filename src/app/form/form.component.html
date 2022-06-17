@@ -1,14 +1,15 @@
 <div class="form-content">
     <form class ="form">
         <h2> Add Details</h2>
+
         <div class="row-content">
             <label for="firstName" class="label text">First Name</label>
-            <input type="text" class="input" pattern="^[A-Z]{1}[a-zA-Z\\s]{2,}$" id="firstName" name="firstName" placeholder="Enter ur first name.."  required [(ngModel)]="addressbookdata.fName">
-        </div>
+           <input type="text" class="input"  pattern="^[A-Z]{1}[a-zA-Z\\s]{2,}$" id="fName" name="fName" placeholder="Enter ur first name.."  required [(ngModel)]="addressbookdata.fName">
+       </div>
 
         <div class="row-content">
             <label for="lastName" class="label text">Last Name</label>
-            <input type="text" class="input" pattern="^[A-Z]{1}[a-zA-Z\\s]{2,}$" id="lastName" name="lastName" placeholder="Enter ur last name.."  required [(ngModel)]="addressbookdata.lName">
+            <input type="text" class="input" pattern="^[A-Z]{1}[a-zA-Z\\s]{2,}$" id="lName" name="lName" placeholder="Enter ur last name.."  required [(ngModel)]="addressbookdata.lName">
         </div>
 
         <div class="row-content">
@@ -113,7 +114,8 @@
         
         <div class="buttons-contact">
             <button type="button" class="button button-cancel" id="cancelButton" (click)="onCancle()">Cancel</button>
-            <button type="button" class="button button-submit" id="submitButton" (click)="onSubmit()">Submit</button>
+            <button type="button" class="button button-submit" id="submitButton"  (click)="onSubmit()">Submit</button>
             <button type="reset" class="button button-reset" id="resetButton" >Reset</button>
         </div>
     </form>
+</div>
