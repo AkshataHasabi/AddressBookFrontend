@@ -10,8 +10,11 @@ export class HeaderComponent implements OnInit {
   
   constructor(private router:Router) { }
 
+  //when a component get initialized the ngOnInit function is called first
   ngOnInit(): void {
   }
+
+  // this function navigate the user from header to DashboardComponent 
   onDashboard(){
     this.router.navigate(["dashboard"]);
   }
